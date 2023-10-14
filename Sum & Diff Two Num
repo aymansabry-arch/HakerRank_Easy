@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+	int Num1 ,Num2;
+    float Num3 ,Num4;
+    scanf("%d%d" ,&Num1 ,&Num2);
+    scanf("%f%f" ,&Num3 ,&Num4);
+    
+    printf("%d %d\n", (Num1 + Num2) ,(Num1 - Num2));
+    printf("%0.1f %0.1f", (Num3 + Num4) ,(Num3 - Num4));
+    return 0;
+}
