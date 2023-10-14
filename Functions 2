@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int find_nth_term(int n, int a, int b, int c){
+    int Array_Stored[n];
+    int x = 0 ,y = 0 ,z = 0;
+    long Result = 0;
+    while(x != n){
+        Array_Stored[x] = (x + 1);
+        ++x;
+    }
+    x = 0;
+    Array_Stored[0] = a;
+    Array_Stored[1] = b;
+    Array_Stored[2] = c;
+    if(n < 4){
+        if(n == 1){
+        Result = a;
+        }
+        if(n == 2){
+            Result = b;
+        }
+        if(n == 3){
+            Result = c;
+        }
+    }
+    else if(n >= 4){
+        x = n - 3;
+        y = x; 
+        z = 3;
+        while(x){ 
+            Array_Stored[z] = Array_Stored[y - x] + Array_Stored[(y - x) + 1] + Array_Stored[(y - x) + 2];
+            Result = Array_Stored[y - x] + Array_Stored[(y - x) + 1] + Array_Stored[(y - x) + 2];
+            --x;
+            ++z;
+        }
+    }
+    else { /* Nothing */ }
+    return Result;
+}
+
+int main() {
+    int n, a, b, c;
+  
+    scanf("%d %d %d %d", &n, &a, &b, &c);
+    int ans = find_nth_term(n, a, b, c);
+    printf("%d", ans); 
+    return 0;
+}
