@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+	
+    int n ,Stored_Value;
+    scanf("%d", &n);
+    Stored_Value = n / 10000;
+    n %= 10000;
+    Stored_Value += (n / 1000);
+    n %= 1000; 
+    Stored_Value += (n / 100);
+    n %= 100;
+    Stored_Value += (n / 10);
+    n %= 10;
+    Stored_Value += (n / 1);
+    printf("%i", Stored_Value);   
+        return 0;
+}
