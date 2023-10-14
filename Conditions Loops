@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int a, b ,Counter;
+    scanf("%d\n%d", &a, &b);
+    /* a Configurations */
+    if((a >= 1) || (a <= 9)){
+      for(Counter = a ;Counter < 10 ;Counter++){
+          switch(Counter){
+              case 1: printf("one  \n"); break;
+              case 2: printf("two  \n"); break;
+              case 3: printf("three\n"); break;
+              case 4: printf("four \n"); break;
+              case 5: printf("five \n"); break;
+              case 6: printf("six  \n"); break;
+              case 7: printf("seven\n"); break;
+              case 8: printf("eight\n"); break;
+              case 9: printf("nine \n"); break;
+              default : /* Nothing */ break;
+          }
+          if(a == 1 && b == 2){Counter = 10;}
+      }
+    }
+    else{
+        /* Nothing */
+    }
+    /* b Configurations */
+     if((b >= 1) || (b <= 9)){
+        for(Counter = b ;Counter < 10 ;Counter++){
+          switch(Counter){
+              case 1: printf("one  \n"); break;
+              case 2: printf("two  \n"); break;
+              case 3: printf("three\n"); break;
+              case 4: printf("four \n"); break;
+              case 5: printf("five \n"); break;
+              case 6: printf("six  \n"); break;
+              case 7: printf("seven\n"); break;
+              case 8: printf("eight\n"); break;
+              case 9: printf("nine \n"); break;
+              default : /* Nothing */ break;
+          }
+           if(b == 2){Counter = 10;}
+        }
+    }
+    else{ /* Nothing */ }
+    
+    /* Configurations the Check number if n > 9 (odd or even)*/
+    if(b > 9){
+        for(Counter = 10 ;Counter <= b ;Counter++){
+    if(1 == (Counter % 2)){
+        printf("odd\n");
+    }
+    else if(0 == (Counter % 2)){
+        printf("even\n");
+    }
+      }
+    }
+    else if(b < 9){ 
+        /* Nothing */ }
+    return 0;
+}
+
